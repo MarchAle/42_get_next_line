@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:12:36 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/27 13:12:52 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:21:43 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_fill_line(char *line, char *buff, int fd)
 	while (ret > 0)
 	{
 		line = ft_strjoin(line, buff);
+		if (line == NULL)
+			return (NULL);
 		if (ft_end_of_line(buff) != -1)
 		{
 			ft_strcpy(buff, buff + ft_end_of_line(buff) + 1);
