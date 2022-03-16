@@ -6,7 +6,7 @@
 /*   By: amarchal <amarchal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:12:36 by amarchal          #+#    #+#             */
-/*   Updated: 2021/11/27 15:23:47 by amarchal         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:02:41 by amarchal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,10 @@ char	*get_next_line(int fd)
 		return (line);
 	free(line);
 	return (NULL);
+}
+
+int	main(void)
+{
+	printf("%s\n", get_next_line(3));
+	printf("%s\n", get_next_line(3));
 }
